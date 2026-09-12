@@ -10,7 +10,10 @@
 <body>
   <header class="site-header">
     <nav class="nav">
-      <a class="nav-brand" href="index.html">Your Name</a>
+      <a class="nav-brand" href="index.html">
+        <span class="avatar mini-avatar"></span>
+        <span class="brand-name">Your Name</span>
+      </a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="learnings.html">Learnings</a></li>
@@ -20,36 +23,48 @@
   </header>
 
   <main class="container">
-    <section class="hero">
-      <p class="hero-eyebrow">Welcome</p>
-      <h1 id="site-name">Your Name</h1>
-      <p class="lead" id="site-tagline">Building things, learning in public, and sharing the journey.</p>
+    <section class="hero fade-in">
+      <span class="avatar avatar-lg" id="hero-avatar"></span>
+      <div>
+        <p class="hero-eyebrow">Welcome</p>
+        <h1 id="site-name">Your Name</h1>
+        <p class="lead" id="site-tagline">Building things, learning in public, and sharing the journey.</p>
+      </div>
     </section>
 
     <section id="about">
+      <p class="section-eyebrow">About</p>
       <h2 class="section-title">My Journey</h2>
-      <p id="about-text">
-        I'm [your name] — [your role/what you do]. This site is where I share
-        my personal journey, the things I'm learning, and how to reach me.
-      </p>
+      <div class="prose" id="about-text">
+        <p>
+          I'm [your name] — [your role/what you do]. This site is where I share
+          my personal journey, the things I'm learning, and how to reach me.
+        </p>
+      </div>
     </section>
 
     <section id="learnings-preview">
+      <p class="section-eyebrow">Notes</p>
       <h2 class="section-title">Recent Learnings</h2>
       <div id="learnings-list" data-limit="3"></div>
-      <p><a href="learnings.html">View all learnings →</a></p>
+      <p style="margin-top: 16px;"><a href="learnings.html">View all learnings →</a></p>
     </section>
 
     <section id="connect">
+      <p class="section-eyebrow">Elsewhere</p>
       <h2 class="section-title">Find Me Online</h2>
       <div class="social-grid" id="social-grid"></div>
     </section>
 
     <section id="contact">
+      <p class="section-eyebrow">Say Hello</p>
       <h2 class="section-title">Get in Touch</h2>
       <p>Have something to share, ask, or collaborate on? Reach out.</p>
       <div class="contact-actions">
-        <a class="btn" id="contact-email" href="#">you@example.com</a>
+        <a class="btn" id="contact-email" href="#">
+          <span class="icon" style="width:16px;height:16px;color:inherit;"></span>
+          <span class="label">you@example.com</span>
+        </a>
       </div>
     </section>
   </main>
