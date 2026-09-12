@@ -10,12 +10,11 @@ const SITE = {
   // line — each becomes its own <p>.
   bio: `
 Hi, I'm Shubham — [your role/what you do, e.g. "a software engineer based in ___"].
-This site is where I share a bit about who I am, what I've worked on, what
-I'm learning, and how to reach me.
+This site is where I share a bit about who I am, what I've worked on, and
+what I'm learning along the way.
 
 [Add 1–2 more sentences about your current focus or what you care about.]
   `,
-  email: "you@example.com",
 };
 
 // Add / remove / edit your social links here.
@@ -24,7 +23,6 @@ I'm learning, and how to reach me.
 const SOCIAL_LINKS = [
   { name: "GitHub", icon: "github", url: "https://github.com/your-username" },
   { name: "LinkedIn", icon: "linkedin", url: "https://linkedin.com/in/your-username" },
-  { name: "X / Twitter", icon: "twitter", url: "https://x.com/your-username" },
   { name: "Instagram", icon: "instagram", url: "https://instagram.com/your-username" },
 ];
 

@@ -7,13 +7,12 @@ A simple, fast, dependency-free personal website built with plain HTML, CSS, and
 - **Work** — professional experience and projects you've built
 - **Writing** — a growing log of notes/learnings you add over time
 - **Connect** — a hub of your social media links
-- **Contact** — a simple way for people to reach you
 
 ## Project structure
 
 ```
 personal-website/
-├── index.html          # Home page (bio, explore cards, writing preview, socials, contact)
+├── index.html          # Home page (bio, explore cards, writing preview, socials)
 ├── journey.html         # Personal journey: narrative + milestone timeline
 ├── work.html             # Experience + projects
 ├── learnings.html       # Full list of all writing/learnings posts
@@ -28,7 +27,7 @@ personal-website/
 
 Almost everything you need to change lives in **`js/data.js`**:
 
-- `SITE.name`, `SITE.tagline`, `SITE.bio`, `SITE.email` — home page identity
+- `SITE.name`, `SITE.tagline`, `SITE.bio` — home page identity
 - `SOCIAL_LINKS` — add/remove/edit your social profiles
 - `JOURNEY.intro` and `JOURNEY.milestones` — your story + timeline (journey.html)
 - `WORK.intro`, `WORK.experience`, `WORK.projects` — your work history (work.html)

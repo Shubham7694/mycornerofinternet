@@ -121,15 +121,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Contact
-  const contactEmail = document.getElementById("contact-email");
-  if (contactEmail) {
-    contactEmail.href = `mailto:${SITE.email}`;
-    contactEmail.querySelector(".label").textContent = SITE.email;
-    const icon = contactEmail.querySelector(".icon");
-    if (icon) icon.innerHTML = ICONS.email;
-  }
-
   // Footer year
   const year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
