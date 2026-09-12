@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name — Personal Site</title>
-  <meta name="description" content="Personal website — journey, learnings, and how to connect." />
+  <title>Shubham Singh — Personal Site</title>
+  <meta name="description" content="Personal website — bio, work, writing, journey, and how to connect." />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -12,11 +12,13 @@
     <nav class="nav">
       <a class="nav-brand" href="index.html">
         <span class="avatar mini-avatar"></span>
-        <span class="brand-name">Your Name</span>
+        <span class="brand-name">Shubham Singh</span>
       </a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="learnings.html">Learnings</a></li>
+        <li><a href="journey.html">Journey</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="learnings.html">Writing</a></li>
         <li><a href="index.html#connect">Connect</a></li>
       </ul>
     </nav>
@@ -27,27 +29,41 @@
       <span class="avatar avatar-lg" id="hero-avatar"></span>
       <div>
         <p class="hero-eyebrow">Welcome</p>
-        <h1 id="site-name">Your Name</h1>
+        <h1 id="site-name">Shubham Singh</h1>
         <p class="lead" id="site-tagline">Building things, learning in public, and sharing the journey.</p>
       </div>
     </section>
 
-    <section id="about">
-      <p class="section-eyebrow">About</p>
-      <h2 class="section-title">My Journey</h2>
-      <div class="prose" id="about-text">
-        <p>
-          I'm [your name] — [your role/what you do]. This site is where I share
-          my personal journey, the things I'm learning, and how to reach me.
-        </p>
+    <section id="bio">
+      <p class="section-eyebrow">Bio</p>
+      <h2 class="section-title">A Little About Me</h2>
+      <div class="prose" id="about-text"></div>
+    </section>
+
+    <section id="explore">
+      <p class="section-eyebrow">Explore</p>
+      <h2 class="section-title">More About Me</h2>
+      <div class="explore-grid">
+        <a class="explore-card" href="journey.html">
+          <p class="explore-title">Personal Journey</p>
+          <p class="explore-desc">Where I started, and how I got here.</p>
+        </a>
+        <a class="explore-card" href="work.html">
+          <p class="explore-title">Work</p>
+          <p class="explore-desc">Experience and things I've built.</p>
+        </a>
+        <a class="explore-card" href="learnings.html">
+          <p class="explore-title">Writing</p>
+          <p class="explore-desc">Notes and learnings, shared over time.</p>
+        </a>
       </div>
     </section>
 
     <section id="learnings-preview">
-      <p class="section-eyebrow">Notes</p>
-      <h2 class="section-title">Recent Learnings</h2>
+      <p class="section-eyebrow">Latest</p>
+      <h2 class="section-title">Recent Writing</h2>
       <div id="learnings-list" data-limit="3"></div>
-      <p style="margin-top: 16px;"><a href="learnings.html">View all learnings →</a></p>
+      <p style="margin-top: 16px;"><a href="learnings.html">View all writing →</a></p>
     </section>
 
     <section id="connect">
@@ -70,7 +86,7 @@
   </main>
 
   <footer class="site-footer">
-    <p>&copy; <span id="year"></span> Your Name. Built with plain HTML, CSS &amp; JS.</p>
+    <p>&copy; <span id="year"></span> Shubham Singh. Built with plain HTML, CSS &amp; JS.</p>
   </footer>
 
   <script src="js/data.js"></script>

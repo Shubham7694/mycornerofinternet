@@ -2,8 +2,10 @@
 
 A simple, fast, dependency-free personal website built with plain HTML, CSS, and JavaScript. Includes:
 
-- **Home / About** — your intro and personal journey
-- **Learnings** — a growing log of notes you add over time
+- **Home** — hero, short bio, and quick links into the sections below
+- **Journey** — your personal story and a milestone timeline
+- **Work** — professional experience and projects you've built
+- **Writing** — a growing log of notes/learnings you add over time
 - **Connect** — a hub of your social media links
 - **Contact** — a simple way for people to reach you
 
@@ -11,8 +13,10 @@ A simple, fast, dependency-free personal website built with plain HTML, CSS, and
 
 ```
 personal-website/
-├── index.html          # Home page (About, learnings preview, socials, contact)
-├── learnings.html       # Full list of all learnings/posts
+├── index.html          # Home page (bio, explore cards, writing preview, socials, contact)
+├── journey.html         # Personal journey: narrative + milestone timeline
+├── work.html             # Experience + projects
+├── learnings.html       # Full list of all writing/learnings posts
 ├── learnings/
 │   └── welcome.html     # Example learning entry
 ├── css/style.css        # All styling (light + dark mode built in)
@@ -24,9 +28,11 @@ personal-website/
 
 Almost everything you need to change lives in **`js/data.js`**:
 
-- `SITE.name`, `SITE.tagline`, `SITE.about`, `SITE.email`
+- `SITE.name`, `SITE.tagline`, `SITE.bio`, `SITE.email` — home page identity
 - `SOCIAL_LINKS` — add/remove/edit your social profiles
-- `LEARNINGS` — the list of learning entries shown on the site
+- `JOURNEY.intro` and `JOURNEY.milestones` — your story + timeline (journey.html)
+- `WORK.intro`, `WORK.experience`, `WORK.projects` — your work history (work.html)
+- `LEARNINGS` — the list of writing/learning entries shown on the site
 
 ### Add a new "learning" post
 

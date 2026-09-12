@@ -33,14 +33,56 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const heroName = document.getElementById("site-name");
   const heroTagline = document.getElementById("site-tagline");
-  const aboutText = document.getElementById("about-text");
   if (heroName) heroName.textContent = SITE.name;
   if (heroTagline) heroTagline.textContent = SITE.tagline;
-  if (aboutText) {
-    aboutText.innerHTML = SITE.about
-      .trim()
-      .split(/\n\s*\n/)
-      .map((p) => `<p>${p.trim()}</p>`)
+
+  renderParagraphs("about-text", SITE.bio);
+  renderParagraphs("journey-intro", typeof JOURNEY !== "undefined" ? JOURNEY.intro : "");
+  renderParagraphs("work-intro", typeof WORK !== "undefined" ? WORK.intro : "");
+
+  // Journey timeline
+  const timelineEl = document.getElementById("journey-timeline");
+  if (timelineEl && typeof JOURNEY !== "undefined") {
+    timelineEl.innerHTML = JOURNEY.milestones
+      .map(
+        (m) => `
+      <li class="timeline-item">
+        <span class="timeline-year">${m.year}</span>
+        <h3 class="timeline-title">${m.title}</h3>
+        <p class="timeline-desc">${m.description}</p>
+      </li>`
+      )
+      .join("");
+  }
+
+  // Work: experience
+  const experienceEl = document.getElementById("experience-list");
+  if (experienceEl && typeof WORK !== "undefined") {
+    experienceEl.innerHTML = WORK.experience
+      .map(
+        (e) => `
+      <div class="experience-item">
+        <span class="experience-period">${e.period}</span>
+        <p class="experience-role">${e.role}</p>
+        <span class="experience-org">${e.org}</span>
+        <p class="experience-desc">${e.description}</p>
+      </div>`
+      )
+      .join("");
+  }
+
+  // Work: projects
+  const projectsEl = document.getElementById("projects-grid");
+  if (projectsEl && typeof WORK !== "undefined") {
+    projectsEl.innerHTML = WORK.projects
+      .map(
+        (p) => `
+      <a class="project-card" href="${p.url}" target="_blank" rel="noopener noreferrer">
+        <p class="project-name">${p.name}</p>
+        <p class="project-desc">${p.description}</p>
+        <div>${(p.tags || []).map((t) => `<span class="tag">${t}</span>`).join("")}</div>
+      </a>`
+      )
       .join("");
   }
 
@@ -106,6 +148,16 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", onScroll, { passive: true });
   }
 });
+
+function renderParagraphs(elementId, text) {
+  const el = document.getElementById(elementId);
+  if (!el || !text) return;
+  el.innerHTML = text
+    .trim()
+    .split(/\n\s*\n/)
+    .map((p) => `<p>${p.trim()}</p>`)
+    .join("");
+}
 
 function formatDate(isoDate) {
   const d = new Date(isoDate + "T00:00:00");
