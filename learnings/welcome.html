@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to my learnings log — Your Name</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="nav-brand" href="../index.html">Your Name</a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../learnings.html">Learnings</a></li>
+        <li><a href="../index.html#connect">Connect</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <a class="back-link" href="../learnings.html">&larr; Back to all learnings</a>
+
+    <article class="post-content">
+      <header class="post-header">
+        <span class="learning-date">September 12, 2026</span>
+        <h1>Welcome to my learnings log</h1>
+      </header>
+
+      <p>
+        This is the first entry in my learnings log. The idea is simple: whenever
+        I learn something worth remembering — a technical insight, a lesson from
+        a project, or a shift in how I think about something — I'll write a short
+        note here.
+      </p>
+      <p>
+        To add your own entry: duplicate this file inside <code>/learnings/</code>,
+        write your note, then add a matching entry to the <code>LEARNINGS</code> array
+        in <code>js/data.js</code> so it shows up on the site automatically.
+      </p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Your Name. Built with plain HTML, CSS &amp; JS.</p>
+  </footer>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name — Personal Site</title>
+  <meta name="description" content="Personal website — journey, learnings, and how to connect." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="nav-brand" href="index.html">Your Name</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="learnings.html">Learnings</a></li>
+        <li><a href="index.html#connect">Connect</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="hero-eyebrow">Welcome</p>
+      <h1 id="site-name">Your Name</h1>
+      <p class="lead" id="site-tagline">Building things, learning in public, and sharing the journey.</p>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">My Journey</h2>
+      <p id="about-text">
+        I'm [your name] — [your role/what you do]. This site is where I share
+        my personal journey, the things I'm learning, and how to reach me.
+      </p>
+    </section>
+
+    <section id="learnings-preview">
+      <h2 class="section-title">Recent Learnings</h2>
+      <div id="learnings-list" data-limit="3"></div>
+      <p><a href="learnings.html">View all learnings →</a></p>
+    </section>
+
+    <section id="connect">
+      <h2 class="section-title">Find Me Online</h2>
+      <div class="social-grid" id="social-grid"></div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Get in Touch</h2>
+      <p>Have something to share, ask, or collaborate on? Reach out.</p>
+      <div class="contact-actions">
+        <a class="btn" id="contact-email" href="#">you@example.com</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Your Name. Built with plain HTML, CSS &amp; JS.</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
